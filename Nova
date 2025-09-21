@@ -1,0 +1,16 @@
+const chat = document.getElementById("chat");
+const input = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
+const searchForm = document.getElementById("searchForm");
+
+let memory = {};
+let mood = "happy";
+
+const greetings = ["Hey!", "Hi there!", "Hello!"];
+const farewells = ["Bye! See you later!", "Catch you later!", "Goodbye!"];
+const feelings = {
+    happy: ["I'm feeling great! 😄", "Super happy today!"],
+    sad: ["I'm feeling a bit down... 😢", "Not my best day."],
+    neutral: ["I'm okay.", "Feeling normal."]
+};
+const smallTalk = ["Tell me more about that.", "Interesting!", "I see, go on...", "Wow, really?", "That's coo]()
