@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Calculator Bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #bot-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    #output {
+      margin-top: 10px;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bot-container">
+    <input type="text" id="user-input" placeholder="Type a calculation...">
+    <button onclick="calculate()">Calculate</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      const input = document.getElementById('user-input').value;
+      let output;
+      try {
+        output = eval(input); // basic calculator logic
+      } catch {
+        output = "Invalid input!";
+      }
+      document.getElementById('output').innerText = output;
+    }
+  </script>
+</body>
+</html>
